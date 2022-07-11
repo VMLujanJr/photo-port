@@ -2,6 +2,7 @@
 /* The first rule is "Only call Hooks from React functions." This should be easy to remember, because you often use Hooks to affect the state of a component in some way and trigger the component to render. */
 /* The second rule is "Only call Hooks at the top level". This means that you cannot use them inside for loops, nested functions within your React component, or conditionals. For organizational purposes and to ensure that you're following these rules, you may want to use Hooks towards the top of your React component. */
 import React, { useState } from 'react';
+import ContactForm from './components/Contact';
 import Gallery from './components/Gallery';
 import Navigation from './components/Navigation';
 import About from './components/About';
@@ -36,6 +37,7 @@ function App() {
         currentCategory={currentCategory}
       ></Navigation>
       <main>
+        <ContactForm></ContactForm>
         <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
       </main>
